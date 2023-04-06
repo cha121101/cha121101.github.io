@@ -14,9 +14,10 @@
 
     <script>
         fetch('main.php').then(res => {
+            console.log(res.text() + "sheesh");
             return res.text()
         }).then(raw => {
-            console.log(raw);
+            console.log();
             var parse = JSON.parse(raw);
             document.querySelector('#root').innerHTML = parse;
         })
