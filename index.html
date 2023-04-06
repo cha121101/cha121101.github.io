@@ -16,6 +16,7 @@
         fetch('main.php').then(res => {
             return res.text()
         }).then(raw => {
+            console.log(raw);
             var parse = JSON.parse(raw);
             document.querySelector('#root').innerHTML = parse;
         })
